@@ -1,0 +1,852 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>How The Nash Equilibrium Helps Explain How Trust Works</title>
+	<!-- TRANSLATOR NOTE: Translate the "content" attribute -->
+	<meta name="description" content="an interactive comic on the art & science of memory" />
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<meta charset="utf-8">
+	<!--	<link rel="icon" type="image/png" href="favicon.png"> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=600">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet"> -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'> -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'> -->
+	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	
+	<style>
+	</style>
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="scrolling-nav.css" rel="stylesheet">
+</head>
+
+<body id="page-top" style="text-align: center;">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">THE HIDDEN SIDE OF TRUST. Well, til now at
+				least.</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#history">History</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#conflicated">Conflicated</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="bg-primary text-white">
+		<div class="container text-center">
+			<h1>TODO Some sort of interesting title</h1>
+			<p class="lead">Yes, the title is interesting. </p>
+		</div>
+	</header>
+
+	<section id="introduction">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h2>Introducing Trust</h2>
+					<!-- <p class="lead" style="text-align: center;"> -->
+					<p class="lead">
+						Whether we like it or not, we have to trust others in most situations.<br>
+						<img src="pics/shrug.jpg" width="300px"></img>
+					</p>
+					<p class="lead">
+						It happens all the time. Even in school! <br>
+					</p>
+					<img src="pics/lockers.jpg" width="600px"></img><br>
+					<p class="lead">
+						<br>
+						So how does trust work in school situations? <br>
+					</p>
+					<img src="pics/classroom.jpg" width="600px"></img>
+					<p class="lead">
+						There are three ways trust is being shown here.<br>
+					</p>
+					<p class="lead">
+						One, the teacher trusts the students not to cheat.
+						<br>
+						Two, the students trust the teacher to not allow cheating to occur.
+						<br>
+						Three, the students trust the other students not to cheat.
+					</p>
+
+					<p class="lead">
+						What will you do?...
+					</p>
+					<!-- First Interactive Module -->
+					<script>
+						function handleIm1Click( myType ){
+							if( myType == "cheat" ){
+								$('#im1_result').html(`
+									<p class="lead">
+										The person next to you was asleep, so you weren't able to cheat<br>
+									</p>
+								`);
+							} else if ( myType == "not cheat" ){
+								$('#im1_result').html(`
+									<p class="lead">
+										The person next to you was asleep, so you weren't able to cheat<br>
+									</p>
+								`)
+							}
+							$('#im1_cheat_button'). attr('disabled','disabled');
+							$('#im1_not_cheat_button'). attr('disabled','disabled');
+						}
+					</script>
+					<div style="border:thick double #11CDDE;">
+						Interactive Module 1<br>
+						<img src="pics/math_test.jpg" width="600px"></img><br>
+						<p class="lead">
+							To Cheat or Not to Cheat...  That is the question
+						</p>
+						<button id="im1_cheat_button" onclick="handleIm1Click('cheat')">CHEAT</button>
+						<button id="im1_not_cheat_button" onclick="handleIm1Click('not cheat')">don't cheat</button>
+						<div id="im1_result"></div>
+					</div>
+					
+					<br>
+					<p class="lead">
+						So... was the choice tough for you? The stakes were low this time around.
+					</p>
+					<p class="lead">
+						Everyone has to go through these type of low-stake choices multiple time a day.
+					</p>
+					<p class="lead">
+						For example... TODO List a few examples
+					</p>
+					<p class="lead">
+						There's a simple concept that helps us understnad these situations. <br>
+						It's called the Nash Equilibrium.
+					</p>
+					<div style="position: relative; width: 100%;">
+						<img src="pics/pencil_concept.jpg" width="500px"></img>
+						<div style="
+							font-family: 'Permanent Marker', cursive; 
+							position: absolute; 
+							top: 35px; left: 340px; 
+							width: 100%;
+							text-align: left;">
+							Nash<br>Equilibrium
+						</div>
+					</div>
+					<p class="lead">
+						Essentially it tries to solve for the best possible situation by comparing outcomes in comparison to the risk
+					</p>
+					<img src="pics/scale.png" width="300px"></img><br>
+					<p class="lead">
+						Something about just because it's the best outcome mathematically, doesn't mean it's good outcome.
+					</p>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="history" style="background-color: #eeeeee;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h2>Da History of John Nash</h2>
+					<!-- <p class="lead" style="text-align:s center;"> -->
+
+						
+					<p class="lead">
+						Have you heard of John Nash?
+					</p>
+
+					<img src="pics/john1.jpg" width="300px"></img><br><br>
+
+					<p class="lead" style="margin-bottom: 3px;">
+						If you did it was probably through the movie A Beautiful Mind. <br>
+						<img src="pics/abeautifulmind.jpg" width="200px"></img>
+					</p>
+					<div style="font-size: small;" >10/10 movie btw!</div>
+					<br>
+
+					<p class="lead">
+						In short, John Nash makes a breakthrough in mathematics which is now widely used in economics. Sir Nash is kind of a big deal.
+					</p>
+
+					<p class="lead">
+						One prominent use of the Nash Equilirbium is in game theory. 
+					</p>
+
+					<p class="lead">
+						Here's one example.
+					</p>
+
+					<!-- Second Interactive Module -->
+					<script>
+						var im2PlayerScore = 0;
+						var im2CompScore = 0;
+						var im2PlayerMoves = [];
+						var im2CompMoves = [];
+
+						function handleIm2Reset(){
+							im2PlayerScore = 0;
+							im2CompScore = 0;
+							im2PlayerMoves = [];
+							im2CompMoves = [];
+							$('#im2_result').html(``);
+						}
+
+						function handleIm2Click( myType ){
+							if( myType == "cheat" ){
+								if(im2CompMoves.length == 0){
+									im2CompMoves.push(1);
+									im2PlayerScore += 3;
+									im2CompScore -= 1;
+								} else {
+									if(im2PlayerMoves[im2PlayerMoves.length-1] == 1){
+										im2CompMoves.push(1);
+										im2PlayerScore += 3;
+										im2CompScore -= 1;
+									} else { 
+										im2CompMoves.push(0);
+										im2PlayerScore += 0;
+										im2CompScore += 0;
+									}
+								}
+								im2PlayerMoves.push(0);
+							} else if ( myType == "not cheat" ){
+								if(im2CompMoves.length == 0){
+									im2CompMoves.push(1);
+									im2PlayerScore += 2;
+									im2CompScore += 2;
+								} else {
+									if(im2PlayerMoves[im2PlayerMoves.length-1] == 1){
+										im2CompMoves.push(1);
+										im2PlayerScore += 2;
+										im2CompScore += 2;
+									} else { 
+										im2CompMoves.push(0);
+										im2PlayerScore -= 1;
+										im2CompScore += 3;
+									}
+								}
+								im2PlayerMoves.push(1);
+							}
+							$('#im2_result').html(`
+								<p class="lead">
+									ROUND ` + im2PlayerMoves.length + ` - SCORE IS: <br>
+									Player `+ im2PlayerScore + ` : ` + im2CompScore +` Computer
+								</p>
+							`);
+						}
+					</script>
+					<div style="border:thick double #11CDDE;">
+						<!-- <img src="pics/math_test.jpg" width="600px"></img><br> -->
+						Interactive Module 2<br>
+						An img here
+						<p class="lead">
+							Some sort of instructions
+						</p>
+						<button id="im2_cheat_button" onclick="handleIm2Click('cheat')">Be Selfish</button>
+						<button id="im2_not_cheat_button" onclick="handleIm2Click('not cheat')">cooperate!</button><br>
+						<div id="im2_result"></div>
+						<button id="im2_reset_button" onclick="handleIm2Reset()">reset score</button>
+					</div>
+					<br>
+					<p class="lead">
+						Were you able to gain a lead against the computer? 
+					</p>
+					<img src="pics/chess.jpg" width="600px"></img>
+
+					<p class="lead">
+						The computer had a specific strategy to not fall behind regarless of what move you decided on. 
+					</p>
+					
+					<p class="lead">
+						It simply starts off by cooperating. <br> 
+						But any move after that was a copy of the your previous round. <br>
+						This strategy was coined the term the Copycat Strategy. <br>
+						Because it copies the players moves! Pretty straightforward huh.
+					</p>
+
+					<p class="lead">
+						It's a pretty solid strategy, but there's just one problem. <br>
+						It can never win. <br>
+						You can go ahead and try the game again, but no matter the moves you play this strategy doesn't allow for the computer to ever win.
+					</p>
+
+					<p class="lead">
+						So you've tried one strategy. Let's try another!
+					</p>
+
+					<!-- Third Interactive Module -->
+					<script>
+						var im3PlayerScore = 0;
+						var im3CompScore = 0;
+						var im3Round = 0;
+
+						function handleIm3Reset(){
+							im3PlayerScore = 0;
+							im3CompScore = 0;
+							im3Round = 0;
+							$('#im3_result').html(``);
+						}
+
+						function handleIm3Click( myType ){
+							im3Round += 1;
+							if( myType == "cheat" ){
+								im3PlayerScore += 0;
+								im3CompScore += 0;
+							} else if ( myType == "not cheat" ){
+								im3PlayerScore -= 1;
+								im3CompScore += 3;
+							}
+							$('#im3_result').html(`
+								<p class="lead">
+									ROUND ` + im3Round + ` - SCORE IS: <br>
+									Player `+ im3PlayerScore + ` : ` + im3CompScore +` Computer
+								</p>
+							`);
+						}
+					</script>
+					<div style="border:thick double #11CDDE;">
+						<!-- <img src="pics/math_test.jpg" width="600px"></img><br> -->
+						Interactive Module 3<br>
+						TODO: An img here
+						<p class="lead">
+							TODO: Some sort of instructions
+						</p>
+						<button id="im3_cheat_button" onclick="handleIm3Click('cheat')">Be Selfish</button>
+						<button id="im3_not_cheat_button" onclick="handleIm3Click('not cheat')">cooperate!</button><br>
+						<div id="im3_result"></div>
+						<button id="im3_reset_button" onclick="handleIm3Reset()">reset score</button>
+					</div>
+					<br>
+					<p class="lead">
+						So, I doubt you managed to win. <br> 
+						In fact, you probably couldn't even score a point. <br>
+						After all, this strategy was made to never lose. 
+					</p>
+
+					<p class="lead">
+						The strategy is pretty simple. <br>
+						The computer cheats every time. 
+					</p>
+					
+					<p class="lead">
+						The problem with this strategy is that it's easy to figure out. <br>
+						Players will catch on, then nobody will get any points. 
+					</p>
+
+					<p class="lead">
+						Now it's a hunt for the best strategy. <br>
+						But what is the best strategy?
+					</p>
+
+					<p class="lead">
+						Let's try several to find out.
+					</p>
+
+					<!-- Fourth Interactive Module -->
+					<style>
+						.btn-group button {
+							background-color: #77dd77; /* Green background */
+							border: 1px solid #4da74d; /* Green border */
+							color: white; /* White text */
+							padding: 10px 24px; /* Some padding */
+							cursor: pointer; /* Pointer/hand icon */
+							float: left; /* Float the buttons side by side */
+							font-size: large;
+						}
+
+						.btn-group button:not(:last-child) {
+							border-right: none; /* Prevent double borders */
+						}
+
+						/* Clear floats (clearfix hack) */
+						.btn-group:after {
+							content: "";
+							clear: both;
+							display: table;
+						}
+
+						/* Add a background color on hover */
+						.btn-group button:hover {
+							background-color: #5aa75a;
+						}
+					</style>
+					<script>
+						var selectedStrat = 'always coop'
+						var im4PlayerScore = 0;
+						var im4CompScore = 0;
+						var hasGrudge = false;
+						var im4Round = 0;
+
+						function im4ChangeStrat(newStrat){
+							if( selectedStrat != newStrat ){
+								handleIm4Reset();
+								selectedStrat = newStrat;
+								if( selectedStrat == 'always coop' ){
+									$('#im4_currently_selected').html(`
+										Currently Selected Strategy: Always Cooperate
+									`);
+								} else if ( selectedStrat == 'grudge hold' ){
+									$('#im4_currently_selected').html(`
+										Currently Selected Strategy: Grudge Holder
+									`);
+								} else if ( selectedStrat == 'monkey' ){
+									$('#im4_currently_selected').html(`
+										Currently Selected Strategy: Monkey
+									`);
+								}
+							}
+						}
+
+						function handleIm4Reset(){
+							im4PlayerScore = 0;
+							im4CompScore = 0;
+							im4Round = 0;
+							hasGrudge = false;
+							$('#im4_result').html(``);
+						}
+
+						function handleIm4Click( myType ){
+							im4Round += 1;
+							if( myType == "cheat" ){
+								if( selectedStrat == 'always coop' ){
+									im4PlayerScore += 3;
+									im4CompScore -= 1;
+								} else if ( selectedStrat == 'grudge hold' ){
+									if( hasGrudge ){
+										im4PlayerScore += 0;
+										im4CompScore += 0;
+									} else {
+										hasGrudge = true;
+										im4PlayerScore += 3;
+										im4CompScore -= 1;
+									}
+								} else if ( selectedStrat == 'monkey' ){
+									if( Math.random() > 0.5 ) { // Cheat
+										im4PlayerScore += 0;
+										im4CompScore += 0;
+									} else {
+										im4PlayerScore += 3;
+										im4CompScore -= 1;
+									}
+								}
+							} else if ( myType == "not cheat" ){
+								if( selectedStrat == 'always coop' ){
+									im4PlayerScore += 2;
+									im4CompScore += 2;
+								} else if ( selectedStrat == 'grudge hold' ){
+									if( hasGrudge ){
+										im4PlayerScore -= 1;
+										im4CompScore += 3;
+									} else {
+										im4PlayerScore += 2;
+										im4CompScore += 2;
+									}
+								} else if ( selectedStrat == 'monkey' ){
+									if( Math.random() > 0.5 ) { // Cheat
+										im4PlayerScore -= 1;
+										im4CompScore += 3;
+									} else {
+										im4PlayerScore += 2;
+										im4CompScore += 2;
+									}
+								}
+							}
+							$('#im4_result').html(`
+								<p class="lead">
+									ROUND ` + im4Round + ` - SCORE IS: <br>
+									Player `+ im4PlayerScore + ` : ` + im4CompScore +` Computer
+								</p>
+							`);
+						}
+					</script>
+					<div style="border:thick double #11CDDE;">
+						<!-- <img src="pics/math_test.jpg" width="600px"></img><br> -->
+						Interactive Module 4<br>
+						TODO: An img here
+						<p class="lead">
+							TODO: Some sort of instructions
+						</p>
+						<div class="btn-group">
+							<button onclick="im4ChangeStrat('always coop')">Always Cooperate</button>
+							<button onclick="im4ChangeStrat('grudge hold')">Grudge Holder</button>
+							<button onclick="im4ChangeStrat('monkey')">Monkey</button>
+						</div><br>
+						<button id="im4_cheat_button" onclick="handleIm4Click('cheat')">Be Selfish</button>
+						<button id="im4_not_cheat_button" onclick="handleIm4Click('not cheat')">cooperate!</button><br>
+						<div id="im4_currently_selected">
+							Currently Selected Strategy: Always Cooperate
+						</div>
+						<div id="im4_result"></div>
+						<button id="im4_reset_button" onclick="handleIm4Reset()">reset score</button>
+					</div>
+
+					<p class="lead">
+						Each strategy has it's own strength and weaknesses. <br>
+						Some strategies are easily predictable and exploitable. <br> 
+						Some strategies depends on you. <br>
+						And some strategies... just don't work.
+					</p>
+
+					<p class="lead">
+						But do these strategies mean anything in real life? <br>
+						I'm so glad you asked. wait... I asked ,,, <br>
+						Regardless, I'm going to explain. 
+					</p>
+
+					<p class="lead">
+						> TODO: Explain a few actual scenarios where it can be applied. 
+					</p>
+
+
+					<p class="lead">
+						> Explain how trust could be formed using Nash’s equilibrium. 
+						But obviously human emotions are a little more complicated than this. 
+					</p>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<section id="conflicated" style="background-color: #f4f4f4;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h2>It Gets Conflicated</h2>
+					<!-- <p class="lead" style="text-align: center;"> -->
+
+					<p class="lead">
+						Did I just use a fake word? Yes. <br>
+						Should it be a real word? Also yes.
+					</p>
+
+					<p class="lead">
+						When something is conflicated it means that something is confusing because it's complicated. <br>
+						And the way the Nash Equilibrium can represent trust is conflicated.
+					</p>
+
+					<p class="lead">
+						But it's my job to make it simple for you. 
+					</p>
+					
+					<p class="lead">
+						Essentially trust needs three things. <br>
+						One, trust needs to have repeated interactions. 
+						Two, both parties need to be able to win. 
+						Three, there needs to be a low number of miscommunications.
+						<!-- (TODO go find the sources again for this) -->
+					</p>
+					
+					<p class="lead">
+						Simple aint it? <br>
+						If any one of these three is missing, then the trust breaks down. 
+					</p>
+
+					<p class="lead">
+						Every game you've tried so far has been fair. <br>
+						It was only a difference in strategies that resulted in different outcomes. 
+					</p>
+					
+					<p class="lead">
+						Now let's try a game where all the odds are againt you. Literally.
+					</p>
+
+							
+					<script>
+						var selectedStrat = 'copy';
+						var im5PlayerScore = 0;
+						var im5CompScore = 0;
+						var im5PlayerMoves = [];
+						var im5CompMoves = [];
+						var im5HasGrudge = false;
+						var im5Round = 0;
+
+						function handleIm5Reset(){
+							im5PlayerScore = 0;
+							im5CompScore = 0;
+							im5Round = 0;
+							im5PlayerMoves = [];
+							im5CompMoves = [];
+							im5HasGrudge = false;
+							$('#im5_result').html(``);
+						}
+
+						function im5ChangeStrat(newStrat){
+							if( selectedStrat != newStrat ){
+								handleIm5Reset();
+								selectedStrat = newStrat;
+								if( selectedStrat == 'copy' ){
+									$('#im5_currently_selected').html(`
+										Currently Selected Strategy: Copycat
+									`);
+								} else if( selectedStrat == 'always cheat' ){
+									$('#im5_currently_selected').html(`
+										Currently Selected Strategy: Always Cheat
+									`);
+								} else if( selectedStrat == 'always coop' ){
+									$('#im5_currently_selected').html(`
+										Currently Selected Strategy: Always Cooperate
+									`);
+								} else if ( selectedStrat == 'grudge hold' ){
+									$('#im5_currently_selected').html(`
+										Currently Selected Strategy: Grudge Holder
+									`);
+								} else if ( selectedStrat == 'monkey' ){
+									$('#im5_currently_selected').html(`
+										Currently Selected Strategy: Monkey
+									`);
+								}
+							}
+						}
+
+						function handleIm5Click( myType ){
+							im5Round += 1;
+							if( myType == "cheat" ){
+								if( selectedStrat == 'copy' ){
+									if(im5PlayerMoves.length == 0){
+										im5CompMoves.push(1);
+										im5PlayerScore += 0;
+										im5CompScore -= 3;
+									} else {
+										if(im5PlayerMoves[im5PlayerMoves.length-1] == 1){
+											im5CompMoves.push(1);
+											im5PlayerScore += 0;
+											im5CompScore -= 3;
+										} else { 
+											im5CompMoves.push(0);
+											im5PlayerScore -= 2;
+											im5CompScore -= 2;
+										}
+									}
+									im5PlayerMoves.push(0);
+								} else if( selectedStrat == 'always cheat' ){
+									im5PlayerScore -= 2;
+									im5CompScore -= 2;
+								} else if( selectedStrat == 'always coop' ){
+									im5PlayerScore += 0;
+									im5CompScore -= 3;
+								} else if ( selectedStrat == 'grudge hold' ){
+									if(im5HasGrudge){ // cheat
+										im5PlayerScore -= 2;
+										im5CompScore -= 2;
+									} else {
+										im5HasGrudge = true;
+										im5PlayerScore += 0;
+										im5CompScore -= 3;
+									}
+								} else if ( selectedStrat == 'monkey' ){
+									if( Math.random() > 0.5 ) { // Cheat
+										im5PlayerScore -= 2;
+										im5CompScore -= 2;
+									} else {
+										im5PlayerScore += 0;
+										im5CompScore -= 3;
+									}
+								}
+							} else if ( myType == "not cheat" ){
+								if( selectedStrat == 'copy' ){
+									if(im5PlayerMoves.length == 0){
+										im5CompMoves.push(1);
+										im5PlayerScore -= 1;
+										im5CompScore -= 1;
+									} else {
+										if(im5PlayerMoves[im5PlayerMoves.length-1] == 1){
+											im5CompMoves.push(1);
+											im5PlayerScore -= 1;
+											im5CompScore -= 1;
+										} else { 
+											im5CompMoves.push(0);
+											im5PlayerScore -= 3;
+											im5CompScore += 0;
+										}
+									}
+									im5PlayerMoves.push(1);
+								} else if( selectedStrat == 'always cheat' ){
+									im5PlayerScore -= 3;
+									im5CompScore += 0;
+								} else if( selectedStrat == 'always coop' ){
+									im5PlayerScore -= 1;
+									im5CompScore -= 1;
+								} else if ( selectedStrat == 'grudge hold' ){
+									if(im5HasGrudge){ // cheat
+										im5PlayerScore -= 3;
+										im5CompScore += 0;
+									} else {
+										im5PlayerScore -= 1;
+										im5CompScore -= 1;
+									}
+								} else if ( selectedStrat == 'monkey' ){
+									if( Math.random() > 0.5 ) { // Cheat
+										im5PlayerScore -= 3;
+										im5CompScore += 0;
+									} else {
+										im5PlayerScore -= 1;
+										im5CompScore -= 1;
+									}
+								}
+							}
+							$('#im5_result').html(`
+								<p class="lead">
+									ROUND ` + im5Round + ` - SCORE IS: <br>
+									Player `+ im5PlayerScore + ` : ` + im5CompScore +` Computer
+								</p>
+							`);
+						}
+					</script>
+					<div style="border:thick double #11CDDE;">
+						<!-- <img src="pics/math_test.jpg" width="600px"></img><br> -->
+						Interactive Module 5<br>
+						TODO: An img here
+						<p class="lead">
+							TODO: Some sort of instructions about Prisoner's dilemma and how the payoffs are different.
+						</p>
+						<div class="btn-group">
+							<button onclick="im5ChangeStrat('copy')">Copycat</button>
+							<button onclick="im5ChangeStrat('always cheat')">Always Cheat</button>
+							<button onclick="im5ChangeStrat('always coop')">Always Cooperate</button>
+							<button onclick="im5ChangeStrat('grudge hold')">Grudge Holder</button>
+							<button onclick="im5ChangeStrat('monkey')">Monkey</button>
+						</div><br>
+						<button id="im5_cheat_button" onclick="handleIm5Click('cheat')">Be Selfish</button>
+						<button id="im5_not_cheat_button" onclick="handleIm5Click('not cheat')">cooperate!</button><br>
+						<div id="im5_currently_selected">
+							Currently Selected Strategy: Copycat
+						</div>
+						<div id="im5_result"></div>
+						<button id="im5_reset_button" onclick="handleIm5Reset()">reset score</button>
+					</div>
+
+					<p class="lead">
+						You can't win. Nobody wins. <br>
+						Sometimes, you don't lose. But you don't win either. 
+					</p>
+
+					<p class="lead">
+						Kinda hard to have trust in a situation where you know you can't win huh. 
+					</p>
+
+					<p class="lead">
+						This is why it's importent to have all parties be able to win-win scenarios.
+					</p>
+
+					<p class="lead">
+						Now let's try a game where the opponent makes mistakes. Quite often at that.
+					</p>
+
+					
+							
+					<script>
+						var im6PlayerScore = 0;
+						var im6CompScore = 0;
+						var im6ConsecutiveCheat = 0;
+						var im6MadeMistake = false;
+						var im6Round = 0;
+
+						function handleIm6Reset(){
+							im6PlayerScore = 0;
+							im6CompScore = 0;
+						  im6ConsecutiveCheat = 0;
+						  im6MadeMistake = false;
+							im6Round = 0;
+							$('#im6_result').html(``);
+						}
+
+						function handleIm6Click( myType ){
+							im6Round += 1;
+							if( Math.random() > 0.4 ) { // Cheat
+								im6MadeMistake = true;
+							} else {
+								im6MadeMistake = false;
+							}
+							if( myType == "cheat" ){
+								if( im6MadeMistake ) {
+									im6PlayerScore += 0;
+									im6CompScore += 0;
+								} else {
+									im6PlayerScore += 3;
+									im6CompScore -= 1;
+								}
+							} else if ( myType == "not cheat" ){
+								if( im6MadeMistake ) {
+									im6PlayerScore -= 1;
+									im6CompScore += 3;
+								} else {
+									im6PlayerScore += 2;
+									im6CompScore -= 2;
+								}
+							}
+							if( im6MadeMistake ) {
+								$('#im6_result').html(`
+									<p class="lead">
+										ROUND ` + im6Round + ` - SCORE IS: <br>
+										Player `+ im6PlayerScore + ` : ` + im6CompScore +` Computer <br>
+										<br>
+										Computer: Oops sorry I made a mistake!
+									</p>
+								`);
+							} else {
+								$('#im6_result').html(`
+									<p class="lead">
+										ROUND ` + im6Round + ` - SCORE IS: <br>
+										Player `+ im6PlayerScore + ` : ` + im6CompScore +` Computer
+									</p>
+								`);
+							}
+						}
+					</script>
+					<div style="border:thick double #11CDDE;">
+						<!-- <img src="pics/math_test.jpg" width="600px"></img><br> -->
+						Interactive Module 6<br>
+						TODO: An img here
+						<p class="lead">
+							TODO: Some sort of instructions that the computer will always try to cooperate, but will make mistakes quite often.
+						</p>
+						<button id="im6_cheat_button" onclick="handleIm6Click('cheat')">Be Selfish</button>
+						<button id="im6_not_cheat_button" onclick="handleIm6Click('not cheat')">cooperate!</button><br>
+						<div id="im6_result"></div>
+						<button id="im6_reset_button" onclick="handleIm6Reset()">reset score</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+</body>
+
+<!-- <footer class="py-5 bg-dark">
+	<div class="container">
+		<p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+	</div>
+</footer> -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="scrolling-nav.js"></script>
+
+</html>
